@@ -35,6 +35,7 @@ public class UserController {
 	
 	@PostMapping("/save")
 	public ResponseEntity<User> save(@RequestBody User user){
+<<<<<<< HEAD
 		user.setPassword(encoder.encode(user.getPassword()));
 		user = userRepository.save(user);		
 		return ResponseEntity.ok().body(user);
@@ -59,4 +60,10 @@ public class UserController {
 		
 	}
 	
+=======
+		user = userRepository.save(user);
+		return ResponseEntity.ok().body(user);
+	}
+	
+>>>>>>> 6ae38599e29e16549969c0cad7095b20f5307e3a
 }
